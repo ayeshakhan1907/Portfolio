@@ -5,29 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
     <style>
-        #gcapta
-        {
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        #gcapta {
             height: 30px;
             width: 70px;
             font-size: 20px;
-            border:2px solid black;
+            border: 2px solid black;
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
-    
-    <input placeholder="enter email" id="email"/> 
-    <br>
-    <input placeholder="enter password" type="password" id="pwd"/>
-    <br>
-    <input placeholder="enter Confirm password" type="password" id="cpwd"/>
-    <br>
-    <div id="gcapta"></div> 
-    <br>
-    <input placeholder="enter capta" id="capta"/>
-    <br>
-    <button id="submit" type="submit" disabled>Submit</button>
+
+    <div id="container">
+        <h1>Registration Page</h1>
+        <input placeholder="enter email" id="email" />
+        <br>
+        <input placeholder="enter password" type="password" id="pwd" />
+        <br>
+        <input placeholder="enter Confirm password" type="password" id="cpwd" />
+        <br>
+        <div id="gcapta"></div>
+        <br>
+        <input placeholder="enter capta" id="capta" />
+        <br>
+        <button id="submit" type="submit" disabled>Submit</button>
+    </div>
     <script src="Registrationpage.js"></script>
 </body>
+
 </html>
