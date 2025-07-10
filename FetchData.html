@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch Data</title>
+  <title>Clothing Products</title>
+  <style>
+      body
+      {
+        background: linear-gradient(to right,
+                    #e1ff00 0%,
+                    #00ff00 30%,
+                    #00ff9d 50%,
+                    #4ab17a 70%,
+                    #7ed1c4 100%);
+      }
+  </style>
 </head>
 <body>
-    <div id="div">
 
-    </div>
-    <script src="FetchData.js"></script>
+<h3>Clothing Products</h3>
+<button onclick="fetchClothes()">Show Clothes</button>
+
+<ol id="productList"></ol>
+
+<script src="FetchData.js"></script>
+
 </body>
 </html>
