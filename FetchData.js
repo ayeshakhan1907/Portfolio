@@ -1,28 +1,30 @@
-fetch('https://dummyjson.com/products')
-    .then(Response => Response.json())
-    .then(characters => {
-        // renderProducts(characters.products)
-        console.log(characters)
-
-    });
-const cardContainer = document.querySelector('#div')
-function renderProducts(products) {
-    products.forEach(product => {
-
-        const div = document.createElement('div')
-        const image = document.createElement('img')
-        const price = document.createElement('h3')
-
-     
-
-        price.textContent = price: ${products.price}
-
-        let c = image.setAttribute("src", products.images)
-
-        div.appendChild(image)
-        div.appendChild(price)
-        cardContainer.appendChild(div)
-
-    });
-
-}
+function fetchClothes() {
+    fetch("https://fakestoreapi.com/products")
+      .then(response => response.json())
+      .then(products => {
+        const list = document.getElementById("productList");
+        list.innerHTML = ""; // clear previous list
+  
+        // Filter only clothing products
+        const clothes = products.filter(item => item.category.includes("clothing"));
+  
+        clothes.forEach(item => {
+          const li = document.createElement("li");
+  
+          // Image
+          const img = document.createElement("img");
+          img.src = item.image;
+          img.width = 50;
+          img.height = 50;
+          img.style.margin = "10px";
+  
+          // Text
+          const text = document.createTextNode(`${item.title}`);
+  
+          // Add to list
+          li.appendChild(img);
+          li.appendChild(text);
+          list.appendChild(li);
+        });
+      });
+  }
